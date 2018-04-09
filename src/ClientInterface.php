@@ -8,5 +8,5 @@ namespace Wearesho\Bobra\Payments;
  */
 interface ClientInterface
 {
-    public function createPayment(UrlPair $pair, TransactionInterface $transaction): PaymentInterface;
+    public function createPayment(UrlPairInterface $pair, TransactionInterface $transaction): PaymentInterface;
 }
