@@ -4,14 +4,18 @@
 [![Build Status](https://travis-ci.org/wearesho-team/bobra-payments.svg?branch=master)](https://travis-ci.org/wearesho-team/bobra-payments)
 [![codecov](https://codecov.io/gh/wearesho-team/bobra-payments/branch/master/graph/badge.svg)](https://codecov.io/gh/wearesho-team/bobra-payments)
 
-This repository only contains interfaces for processing payments.
+This repository contains interfaces for processing payments.  
 Implementation of this interfaces is available in other repositories.
 
+
 ## Contents
-- [ClientInterface](./src/ClientInterface.php) - payment initializer
-- [PaymentInterface](./src/PaymentInterface.php) - result of initializing payment using transaction
-- [TransactionInterface](./src/TransactionInterface.php) - payment transaction to initialize payment
-- [UrlPairInterface](./src/UrlPairInterface.php) - also available [implementation](./src/UrlPair.php)
+- [ClientInterface](./src/ClientInterface.php) - payment initializer.
+- [PaymentInterface](./src/PaymentInterface.php) - result of initializing payment using transaction.
+[Trait](./src/PaymentTrait.php)
+- [TransactionInterface](./src/TransactionInterface.php) - payment transaction to initialize payment.
+[Implementation](./src/Transaction.php)
+- [UrlPairInterface](./src/UrlPairInterface.php) - URL pairs for user redirect after payment. 
+[Implementation](./src/UrlPair.php)
 
 ## License
 MIT  
