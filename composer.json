@@ -1,0 +1,27 @@
+{
+  "name": "wearesho-team/bobra-payments",
+  "description": "Common interfaces for processing payment",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Alexander Letnikow",
+      "email": "reclamme@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=7.1",
+    "phpunit/phpunit": "^7.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Wearesho\\Bobra\\Payments\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Wearesho\\Bobra\\Payments\\Tests\\": "tests/"
+    }
+  }
+}
