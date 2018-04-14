@@ -29,8 +29,7 @@ class Transaction implements TransactionInterface
         string $description,
         array $info = [],
         string $currency = 'UAH'
-    )
-    {
+    ) {
         $this
             ->setService($service)
             ->setAmount($amount)
@@ -78,7 +77,7 @@ class Transaction implements TransactionInterface
 
     public function setAmount(float $amount): Transaction
     {
-        return $this->_setNumeric($this->amount, $amount);
+        return $this->setNumeric($this->amount, $amount);
     }
 
     /**
@@ -132,7 +131,7 @@ class Transaction implements TransactionInterface
         return $this;
     }
 
-    protected function _setNumeric(&$field, float $value): Transaction
+    protected function setNumeric(&$field, float $value): Transaction
     {
         $field = round($value, 2) * 100;
         return $this;

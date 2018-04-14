@@ -11,8 +11,7 @@
   ],
   "minimum-stability": "stable",
   "require": {
-    "php": ">=7.1",
-    "phpunit/phpunit": "^7.1"
+    "php": ">=7.1"
   },
   "autoload": {
     "psr-4": {
@@ -23,5 +22,14 @@
     "psr-4": {
       "Wearesho\\Bobra\\Payments\\Tests\\": "tests/"
     }
+  },
+  "scripts": {
+    "lint": "./vendor/bin/phpcs --standard=PSR2 ./src ./tests",
+    "phpcbf": "./vendor/bin/phpcbf --standard=PSR2 ./src ./tests",
+    "test": "./vendor/bin/phpunit"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.2",
+    "phpunit/phpunit": "^7.1"
   }
 }

@@ -7,6 +7,7 @@
 This repository contains interfaces for processing payments.  
 Implementation of this interfaces is available in other repositories.
 
+[Change log](./CHANGELOG.md)
 
 ## Contents
 - [ClientInterface](./src/ClientInterface.php) - payment initializer.
@@ -16,6 +17,7 @@ Implementation of this interfaces is available in other repositories.
 [Implementation](./src/Transaction.php)
 - [UrlPairInterface](./src/UrlPairInterface.php) - URL pairs for user redirect after payment. 
 [Implementation](./src/UrlPair.php)
+- [TransactionCollection](./src/TransactionCollection.php) - \ArrayObject with TransactionInterface type checking
 
 ## License
 MIT  
