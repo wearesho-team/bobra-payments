@@ -38,8 +38,19 @@ class TransactionCollectionTest extends TestCase
         $collection->append(new \stdClass);
     }
 
-    protected function createTransaction(): Payments\TransactionInterface
+    public function testSerializing()
     {
-        return new Payments\Transaction(1, mt_rand(), 'type', 'Description');
+        $collection = new Payments\TransactionCollection([
+            $this->createTransaction(20)
+        ]);
+        $this->assertEquals(
+            '[{"id":1,"amount":2000,"type":"type","description":"Description","info":[],"currency":"UAH"}]',
+            json_encode($collection)
+        );
+    }
+
+    protected function createTransaction(int $amount = null): Payments\TransactionInterface
+    {
+        return new Payments\Transaction(1, $amount ?? mt_rand(), 'type', 'Description');
     }
 }

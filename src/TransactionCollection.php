@@ -6,11 +6,8 @@ namespace Wearesho\Bobra\Payments;
  * Class TransactionCollection
  * @package Wearesho\Bobra\Payments
  */
-class TransactionCollection extends \ArrayObject
+class TransactionCollection extends \ArrayObject implements \JsonSerializable
 {
-    /** @var Transaction[] */
-    protected $items;
-
     /**
      * TransactionCollection constructor.
      * @param TransactionInterface[] $input
@@ -43,6 +40,14 @@ class TransactionCollection extends \ArrayObject
     {
         $this->checkItem($newval);
         parent::offsetSet($index, $newval);
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function jsonSerialize()
+    {
+        return (array)$this;
     }
 
     protected function checkItem($value): void

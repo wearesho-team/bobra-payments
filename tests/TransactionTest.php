@@ -15,7 +15,7 @@ class TransactionTest extends TestCase
             $amount = 100.50,
             $type = 'CC',
             $description = 'Service Payment',
-            $info = ['key' => mt_rand(),],
+            $info = ['key' => 636962936,],
             $currency = 'RUB'
         );
 
@@ -25,6 +25,10 @@ class TransactionTest extends TestCase
         $this->assertEquals($description, $transaction->getDescription());
         $this->assertEquals($currency, $transaction->getCurrency());
         $this->assertEquals($info, $transaction->getInfo());
+        $this->assertEquals(
+            '{"id":10,"amount":10050,"type":"CC","description":"Service Payment","info":{"key":636962936},"currency":"RUB"}',
+            json_encode($transaction)
+        );
 
         $this->expectException(\InvalidArgumentException::class);
         $transaction->setCurrency('$');

@@ -2,6 +2,11 @@ Bobra Payment Change Log
 ==========================
 [Upgrade instructions](./UPGRADE.md)
 
+1.3.0 April 15, 2018
+--------------------
+- Implement \JsonSerializable by [Transaction](./src/Transaction.php)
+and [TransactionCollection](./src/TransactionCollection.php)
+
 1.2.0 April 14, 2018
 --------------------
 

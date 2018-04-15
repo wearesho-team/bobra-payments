@@ -2,7 +2,7 @@
 
 namespace Wearesho\Bobra\Payments;
 
-class Transaction implements TransactionInterface
+class Transaction implements TransactionInterface, \JsonSerializable
 {
     /** @var string */
     protected $currency;
@@ -129,6 +129,21 @@ class Transaction implements TransactionInterface
     {
         $this->info = $info;
         return $this;
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function jsonSerialize()
+    {
+        return [
+            'id' => $this->getService(),
+            'amount' => $this->getAmount(),
+            'type' => $this->getType(),
+            'description' => $this->getDescription(),
+            'info' => $this->getInfo(),
+            'currency' => $this->getCurrency(),
+        ];
     }
 
     protected function setNumeric(&$field, float $value): Transaction
