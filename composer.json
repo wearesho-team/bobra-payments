@@ -31,5 +31,9 @@
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.2",
     "phpunit/phpunit": "^7.1"
+  },
+  "suggest": {
+    "wearesho-team/platon": "Platon.ua payments integration",
+    "wearesho-team/i-pay": "IPay payments integration"
   }
 }
