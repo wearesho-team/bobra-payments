@@ -26,7 +26,7 @@ class TransactionTest extends TestCase
         $this->assertEquals($currency, $transaction->getCurrency());
         $this->assertEquals($info, $transaction->getInfo());
         $this->assertEquals(
-            '{"id":10,"amount":10050,"type":"CC","description":"Service Payment","info":{"key":636962936},"currency":"RUB"}',
+            '{"id":10,"amount":10050,"type":"CC","description":"Service Payment","info":{"key":636962936},"currency":"RUB"}', // phpcs:ignore
             json_encode($transaction)
         );
 
