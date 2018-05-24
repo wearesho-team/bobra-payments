@@ -18,6 +18,12 @@ Implementation of this interfaces is available in other repositories.
 - [UrlPairInterface](./src/UrlPairInterface.php) - URL pairs for user redirect after payment. 
 [Implementation](./src/UrlPair.php)
 - [TransactionCollection](./src/TransactionCollection.php) - \ArrayObject with TransactionInterface type checking
+- [HasLanguage](./src/HasLanguage.php) - interface, should be used as *TransactionInterface* extension.
+*ServiceInterface* implementation should check if transaction implement this interface and use language
+from it instead of global configuration.
+- [LanguageTrait](./src/LanguageTrait.php) - *HasLanguage* implementation
+- [LanguageTransaction](./src/LanguageTransaction.php) - class extends *Transaction* and implements *HasLanguage*
+interface using *LanguageTrait*
 
 ## License
 MIT  

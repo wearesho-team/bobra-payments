@@ -2,6 +2,11 @@ Bobra Payment Change Log
 ==========================
 [Upgrade instructions](./UPGRADE.md)
 
+1.4.0 May 24, 2017
+------------------
+- Add [HasLanguage](./src/HasLanguage.php) interface with 
+[trait](./src/LanguageTrait.php) and [class](./src/LanguageTransaction.php) implementations
+
 1.3.0 April 15, 2018
 --------------------
 - Implement \JsonSerializable by [Transaction](./src/Transaction.php)
