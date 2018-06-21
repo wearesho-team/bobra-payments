@@ -148,7 +148,7 @@ class Transaction implements TransactionInterface, \JsonSerializable
 
     protected function setNumeric(&$field, float $value): Transaction
     {
-        $field = round($value, 2) * 100;
+        $field = number_format($value, 2, '', '');
         return $this;
     }
 }
