@@ -2,7 +2,11 @@ Bobra Payment Change Log
 ==========================
 [Upgrade instructions](./UPGRADE.md)
 
-1.4.0 May 24, 2017
+1.5.0 Jule 2, 2018
+------------------
+- Add [Credit](./src/Credit) namespace with common interfaces for credit funds transferring
+
+1.4.0 May 24, 2018
 ------------------
 - Add [HasLanguage](./src/HasLanguage.php) interface with 
 [trait](./src/LanguageTrait.php) and [class](./src/LanguageTransaction.php) implementations
