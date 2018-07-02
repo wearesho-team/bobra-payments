@@ -15,7 +15,7 @@ class TransferTest extends TestCase
     protected const AMOUNT = 228;
     protected const CARD_TOKEN = '4111123412340000';
     protected const DESCRIPTION = 'Some Text';
-    protected const CURRENCY = 'UAH';
+    protected const CURRENCY = 'USD';
 
     /** @var Credit\Transfer */
     protected $model;
@@ -55,5 +55,17 @@ class TransferTest extends TestCase
     public function testGetDescription(): void
     {
         $this->assertEquals(static::DESCRIPTION, $this->model->getDescription());
+    }
+
+    public function testDefaultNullValues(): void
+    {
+        $this->model = new Credit\Transfer(
+            static::ID,
+            static::AMOUNT,
+            static::CARD_TOKEN
+        );
+
+        $this->assertNull($this->model->getDescription());
+        $this->assertEquals('UAH', $this->model->getCurrency());
     }
 }
