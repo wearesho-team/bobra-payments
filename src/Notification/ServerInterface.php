@@ -10,5 +10,10 @@ use Psr\Http\Message\RequestInterface;
  */
 interface ServerInterface
 {
+    /**
+     * @param RequestInterface $request
+     * @return PaymentInterface
+     * @throws Exception
+     */
     public function handle(RequestInterface $request): PaymentInterface;
 }
