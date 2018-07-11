@@ -2,6 +2,10 @@ Bobra Payment Change Log
 ==========================
 [Upgrade instructions](./UPGRADE.md)
 
+1.6.0 Jule 11, 2018
+-------------------
+- Add [Notification](./src/Notification) namespace with common interfaces for handling payments notifications
+
 1.5.0 Jule 2, 2018
 ------------------
 - Add [Credit](./src/Credit) namespace with common interfaces for credit funds transferring
