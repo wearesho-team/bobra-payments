@@ -2,60 +2,16 @@
 
 namespace Wearesho\Bobra\Payments;
 
+use Wearesho\BaseCollection;
+
 /**
  * Class TransactionCollection
  * @package Wearesho\Bobra\Payments
  */
-class TransactionCollection extends \ArrayObject implements \JsonSerializable
+class TransactionCollection extends BaseCollection
 {
-    /**
-     * TransactionCollection constructor.
-     * @param TransactionInterface[] $input
-     * @param int $flags
-     * @param string $iteratorClass
-     */
-    public function __construct(array $input = [], int $flags = 0, string $iteratorClass = "ArrayIterator")
+    public function type(): string
     {
-        foreach ($input as $item) {
-            $this->checkItem($item);
-        }
-
-        parent::__construct($input, $flags, $iteratorClass);
-    }
-
-    /**
-     * @param TransactionInterface $value
-     */
-    public function append($value)
-    {
-        $this->checkItem($value);
-        parent::append($value);
-    }
-
-    /**
-     * @param mixed $index
-     * @param TransactionInterface $newval
-     */
-    public function offsetSet($index, $newval)
-    {
-        $this->checkItem($newval);
-        parent::offsetSet($index, $newval);
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public function jsonSerialize()
-    {
-        return (array)$this;
-    }
-
-    protected function checkItem($value): void
-    {
-        if (!$value instanceof Transactioninterface) {
-            throw new \InvalidArgumentException(
-                'All items have to be instance of ' . TransactionInterface::class
-            );
-        }
+        return TransactionInterface::class;
     }
 }
