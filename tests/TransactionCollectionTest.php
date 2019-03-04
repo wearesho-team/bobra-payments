@@ -11,11 +11,9 @@ use Wearesho\Bobra\Payments;
  */
 class TransactionCollectionTest extends TestCase
 {
-    /**
-     * @expectedException \InvalidArgumentException
-     */
     public function testInvalidConstruction()
     {
+        $this->expectException(\InvalidArgumentException::class);
         $invalidArgument = [
             new \stdClass(), // not transaction interface object
         ];
