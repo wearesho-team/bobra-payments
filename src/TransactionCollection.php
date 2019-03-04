@@ -10,7 +10,7 @@ use Wearesho\BaseCollection;
  */
 class TransactionCollection extends BaseCollection
 {
-    public function type(): string
+    final public function type(): string
     {
         return TransactionInterface::class;
     }
