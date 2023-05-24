@@ -2,6 +2,12 @@ Bobra Payment Change Log
 ==========================
 [Upgrade instructions](./UPGRADE.md)
 
+2.0.0 May 24, 2023
+------------------
+- Add [PayerDetails](./src/PayerDetailsInterface.php) interface with [implementation](./src/PayerDetails.php)
+- Add $payerDetails argument to [ClientInterface](./src/ClientInterface.php) createPayment method
+- The minimum PHP version has been increased to 7.4.
+
 1.5.0 Jule 2, 2018
 ------------------
 - Add [Credit](./src/Credit) namespace with common interfaces for credit funds transferring

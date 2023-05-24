@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Wearesho\Bobra\Payments;
 
 /**
@@ -8,5 +10,9 @@ namespace Wearesho\Bobra\Payments;
  */
 interface ClientInterface
 {
-    public function createPayment(UrlPairInterface $pair, TransactionInterface $transaction): PaymentInterface;
+    public function createPayment(
+        UrlPairInterface $pair,
+        TransactionInterface $transaction,
+        PayerDetailsInterface $payerDetails
+    ): PaymentInterface;
 }
