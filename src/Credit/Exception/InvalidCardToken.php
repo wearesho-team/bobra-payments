@@ -10,5 +10,4 @@ use Wearesho\Bobra\Payments\Credit;
  */
 interface InvalidCardToken extends Credit\ExceptionInterface
 {
-
 }

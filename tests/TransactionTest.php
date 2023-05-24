@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Wearesho\Bobra\Payments\Tests;
 
 use PHPUnit\Framework\TestCase;

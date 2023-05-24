@@ -29,7 +29,7 @@ class TransactionCollectionTest extends TestCase
         $collection = new Payments\TransactionCollection();
         $collection[1] = $this->createTransaction();
         $this->expectException(\InvalidArgumentException::class);
-        $collection[2] = new \stdClass;
+        $collection[2] = new \stdClass();
     }
 
     public function testInvalidAppend()
@@ -39,7 +39,7 @@ class TransactionCollectionTest extends TestCase
         $this->expectException(\InvalidArgumentException::class);
         $this->expectExceptionMessage('All items have to be instance of Wearesho\Bobra\Payments\TransactionInterface');
         /** @noinspection PhpParamsInspection */
-        $collection->append(new \stdClass);
+        $collection->append(new \stdClass());
     }
 
     public function testSerializing()
