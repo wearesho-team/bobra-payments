@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Wearesho\Bobra\Payments\Tests;
 
 use PHPUnit\Framework\TestCase;
@@ -11,14 +13,14 @@ use Wearesho\Bobra\Payments;
  */
 class TransactionCollectionTest extends TestCase
 {
-    /**
-     * @expectedException \InvalidArgumentException
-     */
     public function testInvalidConstruction()
     {
         $invalidArgument = [
             new \stdClass(), // not transaction interface object
         ];
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionMessage('All items have to be instance of Wearesho\Bobra\Payments\TransactionInterface');
+        /** @noinspection PhpParamsInspection */
         new Payments\TransactionCollection($invalidArgument);
     }
 
@@ -35,6 +37,8 @@ class TransactionCollectionTest extends TestCase
         $collection = new Payments\TransactionCollection();
         $collection->append($this->createTransaction());
         $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionMessage('All items have to be instance of Wearesho\Bobra\Payments\TransactionInterface');
+        /** @noinspection PhpParamsInspection */
         $collection->append(new \stdClass);
     }
 
