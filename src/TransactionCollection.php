@@ -26,7 +26,7 @@ class TransactionCollection extends \ArrayObject implements \JsonSerializable
     /**
      * @param TransactionInterface $value
      */
-    public function append($value)
+    public function append(mixed $value): void
     {
         $this->checkItem($value);
         parent::append($value);
@@ -36,7 +36,7 @@ class TransactionCollection extends \ArrayObject implements \JsonSerializable
      * @param mixed $index
      * @param TransactionInterface $newval
      */
-    public function offsetSet($index, $newval)
+    public function offsetSet(mixed $index, mixed $newval): void
     {
         $this->checkItem($newval);
         parent::offsetSet($index, $newval);
@@ -45,12 +45,12 @@ class TransactionCollection extends \ArrayObject implements \JsonSerializable
     /**
      * @inheritdoc
      */
-    public function jsonSerialize()
+    public function jsonSerialize(): array
     {
         return (array)$this;
     }
 
-    protected function checkItem($value): void
+    protected function checkItem(mixed $value): void
     {
         if (!$value instanceof Transactioninterface) {
             throw new \InvalidArgumentException(

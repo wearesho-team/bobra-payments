@@ -134,7 +134,7 @@ class Transaction implements TransactionInterface, \JsonSerializable
     /**
      * @inheritdoc
      */
-    public function jsonSerialize()
+    public function jsonSerialize(): array
     {
         return [
             'id' => $this->getService(),

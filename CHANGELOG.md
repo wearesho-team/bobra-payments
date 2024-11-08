@@ -2,6 +2,14 @@ Bobra Payment Change Log
 ==========================
 [Upgrade instructions](./UPGRADE.md)
 
+3.0.0 October 8, 2024
+------------------
+- Add strict types to [TransactionCollection](./src/TransactionCollection.php) to match ArrayObject
+- Add array return type to [TransactionCollection::jsonSerialize](./src/TransactionCollection.php)
+and [Transaction::jsonSerialize](./src/Transaction.php)
+to match JsonSerializable
+- The minimum PHP version has been increased to 8.1.
+
 2.0.0 May 24, 2023
 ------------------
 - Add [PayerDetails](./src/PayerDetailsInterface.php) interface with [implementation](./src/PayerDetails.php)
