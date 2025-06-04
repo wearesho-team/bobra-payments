@@ -14,7 +14,7 @@ class Exception extends \Exception implements ExceptionInterface
         TransferInterface $transfer,
         string $message,
         int $code = 0,
-        \Throwable $previous = null
+        ?\Throwable $previous = null
     ) {
         $this->transfer = $transfer;
         parent::__construct($message, $code, $previous);

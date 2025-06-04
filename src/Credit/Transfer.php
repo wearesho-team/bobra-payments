@@ -14,8 +14,8 @@ class Transfer implements TransferInterface
         int $id,
         int $amount,
         string $cardToken,
-        string $description = null,
-        string $currency = null
+        ?string $description = null,
+        ?string $currency = null
     ) {
         $this->id = $id;
         $this->amount = $amount;

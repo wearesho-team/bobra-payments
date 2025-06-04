@@ -14,7 +14,7 @@ class UrlPair implements UrlPairInterface
     /** @var string */
     protected $bad;
 
-    public function __construct(string $good, string $bad = null)
+    public function __construct(string $good, ?string $bad = null)
     {
         $this->good = $good;
         $this->bad = $bad ?? $this->good;
