@@ -2,14 +2,15 @@
 
 namespace Wearesho\Bobra\Payments\Tests;
 
+use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 use Wearesho\Bobra\Payments;
 
 /**
  * Class LanguageTransactionTest
  * @package Wearesho\Bobra\Payments\Tests
- * @coversDefaultClass \Wearesho\Bobra\Payments\LanguageTransaction
  */
+#[CoversClass(Payments\LanguageTransaction::class)]
 class LanguageTransactionTest extends TestCase
 {
     protected const LANGUAGE = 'UA';

@@ -53,7 +53,7 @@ class TransactionCollectionTest extends TestCase
         );
     }
 
-    protected function createTransaction(int $amount = null): Payments\TransactionInterface
+    protected function createTransaction(?int $amount = null): Payments\TransactionInterface
     {
         return new Payments\Transaction(1, $amount ?? mt_rand(), 'type', 'Description');
     }

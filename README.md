@@ -1,11 +1,13 @@
 # Bobra Payments
 [![Latest Stable Version](https://poser.pugx.org/wearesho-team/bobra-payments/v/stable.png)](https://packagist.org/packages/wearesho-team/bobra-payments)
 [![Total Downloads](https://poser.pugx.org/wearesho-team/bobra-payments/downloads.png)](https://packagist.org/packages/wearesho-team/bobra-payments)
-[![Build Status](https://travis-ci.org/wearesho-team/bobra-payments.svg?branch=master)](https://travis-ci.org/wearesho-team/bobra-payments)
+[![PHP Composer](https://github.com/wearesho-team/bobra-payments/actions/workflows/php.yml/badge.svg)](https://github.com/wearesho-team/bobra-payments/actions/workflows/php.yml)
 [![codecov](https://codecov.io/gh/wearesho-team/bobra-payments/branch/master/graph/badge.svg)](https://codecov.io/gh/wearesho-team/bobra-payments)
 
 This repository contains interfaces for processing payments.  
 Implementation of this interfaces is available in other repositories.
+
+Compatibility: tested on PHP 8.4, PHP 8.5
 
 [Change log](./CHANGELOG.md)
 
