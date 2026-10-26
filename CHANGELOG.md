@@ -2,6 +2,12 @@ Bobra Payment Change Log
 ==========================
 [Upgrade instructions](./UPGRADE.md)
 
+3.1.0 June 4, 2025
+------------------
+- The minimum PHP version has been increased to 8.4.
+- Explicit nullable parameter types in [Credit\Exception](./src/Credit/Exception.php),
+[Credit\Transfer](./src/Credit/Transfer.php) and [UrlPair](./src/UrlPair.php) (PHP 8.4 deprecation)
+
 3.0.0 October 8, 2024
 ------------------
 - Add strict types to [TransactionCollection](./src/TransactionCollection.php) to match ArrayObject
